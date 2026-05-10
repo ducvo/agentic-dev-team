@@ -58,7 +58,7 @@ agents/<role>/
 | `ai-architect` | Governance rules, risk tiers, SDLC pipeline | `agent-job-spec`, `ai-code-review`, `architecture-decision-record`, `tech-debt-triage`, `governance-checklist` |
 | `senior-engineer` | Orchestration rules, blast radius guide | `spec-generator`, `agent-failure-diagnostician`, `context-file-curator`, `codebase-health-audit` |
 | `quality-engineer` | Risk zones, six-layer testing strategy | `adversarial-code-review`, `eval-suite-builder`, `test-strategy-charter` |
-| `ba-product-analyst` | Spec depth guide, 7-section spec structure | `spec-drafter`, `spec-completeness-auditor`, `impact-assessor` |
+| `ba-product-analyst` | Spec depth guide, 7-section spec structure | `spec-drafter`, `spec-completeness-auditor`, `impact-assessor`, `requirement-triage` |
 | `devops-platform` | Model routing tiers, cost control levers | `agent-identity-governance`, `agent-cost-investigator`, `agentic-pipeline-architect` |
 | `ai-execution-agent` | Capabilities, guardrails, escalation triggers, PR template | `pr-writer`, `escalation-handler` |
 
