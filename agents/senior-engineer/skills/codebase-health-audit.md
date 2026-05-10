@@ -70,6 +70,17 @@ Catch AI-generated technical debt before it compounds into a month-12 crisis.
 - [Job spec stub for each automatable fix]
 ```
 
+## After the audit: action loop
+
+The report is only useful if it drives action. For each finding:
+
+1. **Critical findings** → create agent job specs immediately using `spec-generator`; assign to next sprint
+2. **Context file updates** → run `context-file-curator` to apply them now, not later
+3. **Medium findings** → add to backlog with effort estimate from the report
+4. **Suggested agent cleanup jobs** → review blast radius before running; large-scope cleanup agents are high risk
+
+Share the report with the Tech Lead — rising complexity trends are architectural signals, not just maintenance tasks.
+
 ## Gotchas
 - Don't run a large cleanup agent without first scoping what it will touch — large blast radius cleanup is high risk
 - Stale context files are the highest-leverage fix: updating them prevents future debt from accumulating

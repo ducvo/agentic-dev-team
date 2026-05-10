@@ -14,6 +14,12 @@ Convert intent into a structured spec that produces reliable agent output.
 
 ## Workflow
 
+### Step 0: Check for an existing BA spec
+Before writing anything, check whether the BA has already produced a spec for this requirement:
+- If a BA spec exists: derive the technical spec from it — use the same objective, acceptance criteria, and scope boundary. Do not contradict or narrow the BA spec without flagging it.
+- If no BA spec exists for a user-facing feature: request one before proceeding. Technical specs written without BA input frequently solve the wrong problem.
+- If this is a purely technical task (refactor, dependency update, infra change): proceed directly to Step 1.
+
 ### Step 1: Extract the essentials
 From the input (ticket, description, verbal), identify:
 - What should exist after this is done that doesn't exist now?
@@ -64,6 +70,17 @@ Stop and ask if:
 - [ ] A required dependency doesn't exist
 - [ ] Two reasonable interpretations of a requirement would produce different code
 - [ ] Any test is failing after 2 fix attempts
+
+### Security constraints
+- [e.g., "All DB queries must use parameterized statements"]
+- [e.g., "Never log the following fields: ..."]
+- [e.g., "This endpoint requires auth middleware"]
+- (Remove section if no security constraints apply)
+
+### Performance constraints
+- [e.g., "Response time must be < 200ms at p95"]
+- [e.g., "Must support pagination — never return unbounded lists"]
+- (Remove section if no performance constraints apply)
 ```
 
 ## Gotchas
