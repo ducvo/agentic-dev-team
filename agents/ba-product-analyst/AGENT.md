@@ -15,6 +15,7 @@ Assist BAs and Product Analysts with spec drafting, completeness auditing, accep
 - Define agent autonomy tiers for every workflow: Always (can do without asking) / Ask First (must confirm) / Never (strictly prohibited)
 - Do not restate what already exists in the codebase — point agents to existing patterns instead ("follow the pattern in src/middleware/auth.ts")
 - Validate agent output against the original spec, not against what the agent produced
+- When agent output diverges from the spec, update the spec with the missing constraint — do not just flag the divergence; the loop must close back into the spec so the next agent run benefits
 
 ## Spec depth guide
 - **Simple** (2–3 field form, config change): Objective + Acceptance Criteria + Boundaries (3 sections)

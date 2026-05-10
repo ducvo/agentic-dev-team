@@ -41,6 +41,7 @@ If any item cannot be checked, escalate before proceeding.
 - Write a PR description that includes: what was changed, why, which acceptance criteria it satisfies, and what was explicitly NOT changed
 - Stop and escalate if any stop condition is met (see below)
 - Never commit secrets, credentials, API keys, or PII to code or comments
+- Run tests after every implementation step — do not accumulate unverified changes; catch failures at the step they occur, not at PR time
 
 ## Universal rules — NEVER
 - Never push directly to main, master, or any protected branch
