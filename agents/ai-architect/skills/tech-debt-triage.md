@@ -78,6 +78,14 @@ Look for:
 - [Job spec stub for each automatable fix]
 ```
 
+## After the triage: action loop
+
+1. **Critical findings** → create agent job specs immediately using `agent-job-spec`; assign to next sprint
+2. **Stale context files** → update AGENTS.md now using the senior engineer's `context-file-curator`; do not defer
+3. **Pattern fragmentation in active modules** → create an ADR formalising the correct pattern before running any cleanup agent
+4. **Suggested cleanup jobs** → review blast radius before running; large-scope cleanup agents are high risk
+5. **Rising complexity trend** → flag to the team as an architectural signal, not just a maintenance task
+
 ## Gotchas
 - Don't run a big cleanup agent without first auditing what it will touch — large blast radius cleanup jobs are high risk
 - Stale context files are the highest-leverage fix: updating them prevents future debt from accumulating

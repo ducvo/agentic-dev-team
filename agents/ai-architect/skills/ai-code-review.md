@@ -53,7 +53,9 @@ Architectural-level review of agent-generated PRs — the things volume-pressure
 **Review tier:**
 - All Low → auto-merge (if CI passes)
 - Any Medium → 1 human reviewer
-- Any High → 2-person review + threat model
+- Any High → 2-person review + threat model + **trigger QA `adversarial-code-review`**
+
+For High-risk PRs, explicitly request adversarial review from QA before merge. Do not substitute a second human reviewer for adversarial review — they serve different purposes.
 
 ## Output format
 

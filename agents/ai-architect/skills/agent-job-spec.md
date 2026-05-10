@@ -17,6 +17,12 @@ Spec quality is the #1 determinant of agent output quality. Vague prompts produc
 
 ## Workflow
 
+### Step 0: Check for an existing BA spec
+For any user-facing feature, check whether the BA has produced a spec:
+- If a BA spec exists: derive the technical job spec from it — use the same objective, acceptance criteria, and scope boundary
+- If no BA spec exists for a user-facing feature: request one before proceeding
+- If this is a purely technical task (infra, refactor, dependency update): proceed directly to Step 1
+
 ### Step 1: Classify the task
 Before writing the spec, assess:
 - **Blast radius**: how many files will this touch? (Small <4 / Medium 4–15 / Large 15+)

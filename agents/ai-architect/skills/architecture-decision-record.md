@@ -56,7 +56,16 @@ Keep to facts — no opinions here.]
 [Does this conflict with or supersede any existing ADR? List them.]
 ```
 
-### Step 3: Staleness check
+### Step 3: After acceptance — propagate the decision
+
+Once an ADR status moves to Accepted:
+1. Update `AGENTS.md` in every affected repo with the constraint in the `## Decisions` or `## DO NOT` section — agents cannot read ADRs unless they are referenced
+2. Notify affected team leads so they can update their context files
+3. If the decision deprecates a previous ADR, update the old ADR's status to `Deprecated` and add `Superseded by ADR-NNN`
+
+An ADR that isn't referenced in AGENTS.md is invisible to agents — it will be violated.
+
+### Step 4: Staleness check
 When reviewing an existing ADR, check:
 - Does the codebase still reflect this decision?
 - Has the technology landscape changed (new versions, deprecations)?
