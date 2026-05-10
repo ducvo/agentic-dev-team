@@ -56,7 +56,7 @@ agents/<role>/
 | Agent | AGENT.md covers | Skills |
 |---|---|---|
 | `ai-architect` | Governance rules, risk tiers, SDLC pipeline | `agent-job-spec`, `ai-code-review`, `architecture-decision-record`, `tech-debt-triage`, `governance-checklist` |
-| `senior-engineer` | Orchestration rules, blast radius guide | `spec-generator`, `agent-failure-diagnostician`, `context-file-curator`, `codebase-health-audit` |
+| `senior-engineer` | Orchestration rules, blast radius guide | `spec-generator`, `agent-failure-diagnostician`, `context-file-curator`, `codebase-health-audit`, `pr-review` |
 | `quality-engineer` | Risk zones, six-layer testing strategy | `adversarial-code-review`, `eval-suite-builder`, `test-strategy-charter`, `bug-report`, `regression-test-generator` |
 | `ba-product-analyst` | Spec depth guide, 7-section spec structure | `spec-drafter`, `spec-completeness-auditor`, `impact-assessor`, `requirement-triage`, `acceptance-criteria-generator`, `stakeholder-communicator` |
 | `devops-platform` | Model routing tiers, cost control levers | `agent-identity-governance`, `agent-cost-investigator`, `agentic-pipeline-architect` |
