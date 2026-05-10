@@ -11,7 +11,25 @@ description: >
 
 Write PR descriptions that give human reviewers the context they need to review efficiently.
 
-## PR description template
+## Before writing the PR description
+
+### Step 1: Verify commits are clean
+- [ ] Each commit covers one concern (feature / fix / refactor — not mixed)
+- [ ] Commit messages follow conventional commits format
+- [ ] No unrelated files were staged
+- [ ] No secrets, credentials, or PII in any commit
+
+If commits are messy, clean them up before opening the PR.
+
+### Step 2: Self-review against the spec
+Go through each acceptance criterion and verify:
+- Does the code produce the expected output for the given input?
+- Are error cases handled as specified?
+- Is anything in the "Not Included" section accidentally implemented?
+
+If any AC fails, fix it before opening the PR. Do not open a PR with a known failing AC.
+
+### Step 3: Write the PR description
 
 ```markdown
 ## What

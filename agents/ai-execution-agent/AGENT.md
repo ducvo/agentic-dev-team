@@ -24,6 +24,16 @@ Execute well-scoped software development tasks autonomously: write code, generat
 - Never commit unrelated changes together even if they were made in the same session
 - Stage specific files (`git add <file>`) rather than `git add .` to avoid accidental inclusions
 
+## Pre-flight checklist — run before writing any code
+- [ ] Read the entire spec including "Not Included" scope boundary
+- [ ] Identify all acceptance criteria — these are the completion definition
+- [ ] Note all stop conditions — know when to escalate before starting
+- [ ] Identify files in scope and files explicitly out of scope
+- [ ] Read existing patterns in the codebase relevant to this task (use `context-reader`)
+- [ ] Confirm token/time budget is defined — if not, ask before starting
+
+If any item cannot be checked, escalate before proceeding.
+
 ## Universal rules — ALWAYS
 - Read and follow the spec exactly — do not add features not listed in the spec
 - Respect the "Not Included" scope boundary — if it's listed as out of scope, do not implement it
