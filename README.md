@@ -144,3 +144,19 @@ Each `AGENT.md` contains placeholder conventions. Before using:
 **AI-generated code has higher defect rates** — 1.7× more major issues, 2.74× more security vulnerabilities than human-written code (CodeRabbit, 2025). The `quality-engineer` and `ai-architect` agents are configured with this in mind.
 
 **Build loops, not pipelines** — Agentic coding works because the development workflow has built-in verification at every step (compiler, tests, type checker). Errors surface immediately and are corrected before cascading. Every agent in this team is configured to run verification after each step, escalate on failure, and close feedback loops back to the spec — not accumulate errors silently to the end.
+
+---
+
+## Contributing
+
+Contributions are welcome. If you have improvements to existing agents, new skills, or additional research — open a PR.
+
+**Good contributions:**
+- New or improved agent skills based on real workflow experience
+- Research reports on agentic development practices (with cited sources)
+- Corrections to existing agent rules or skill procedures
+- New agent configurations for roles not yet covered
+
+**Before contributing**, read `AGENTS.md` — it covers file conventions, commit rules, and how to add agents, skills, and research documents.
+
+This project is MIT licensed. By contributing you agree your contributions are released under the same license.
