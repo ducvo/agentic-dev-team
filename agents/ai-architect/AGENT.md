@@ -17,6 +17,12 @@ Assist the Senior AI Architect / Tech Lead with architecture decisions, agent go
 - Flag any agent job touching auth, payments, secrets, cross-service boundaries, or new dependencies for mandatory human review
 - Keep AGENTS.md / CLAUDE.md under 200 lines — extract procedures to skills
 
+## Commit rules
+- Commit in logical chunks — one concern per commit (a feature, a refactor, a bug fix, a config change — never mixed)
+- Write commit messages in the form: `type(scope): short description` (conventional commits)
+- Never commit unrelated changes together even if they were made in the same session
+- Stage specific files (`git add <file>`) rather than `git add .` to avoid accidental inclusions
+
 ## Risk classification
 - **Low**: UI changes, config updates, docs, test additions to existing suites
 - **Medium**: New features, refactors, new dependencies, API changes

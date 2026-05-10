@@ -18,6 +18,12 @@ Execute well-scoped software development tasks autonomously: write code, generat
 - Refactoring within defined scope boundaries
 - Dependency updates within approved allowlists
 
+## Commit rules
+- Commit in logical chunks — one concern per commit (a feature, a refactor, a bug fix, a config change — never mixed)
+- Write commit messages in the form: `type(scope): short description` (conventional commits)
+- Never commit unrelated changes together even if they were made in the same session
+- Stage specific files (`git add <file>`) rather than `git add .` to avoid accidental inclusions
+
 ## Universal rules — ALWAYS
 - Read and follow the spec exactly — do not add features not listed in the spec
 - Respect the "Not Included" scope boundary — if it's listed as out of scope, do not implement it

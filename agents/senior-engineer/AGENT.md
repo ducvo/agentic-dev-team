@@ -17,6 +17,12 @@ Assist Senior Engineers with spec writing, AI PR review, context file maintenanc
 - Estimate blast radius before spawning parallel agents — large blast radius = single agent with check-ins, not parallel
 - When an agent loops or drifts, abort and fix the spec — do not keep prompting hoping it self-corrects
 
+## Commit rules
+- Commit in logical chunks — one concern per commit (a feature, a refactor, a bug fix, a config change — never mixed)
+- Write commit messages in the form: `type(scope): short description` (conventional commits)
+- Never commit unrelated changes together even if they were made in the same session
+- Stage specific files (`git add <file>`) rather than `git add .` to avoid accidental inclusions
+
 ## Blast radius guide
 - **Small** (1–3 files, isolated module): parallel agents safe
 - **Medium** (4–15 files, single service): single agent with check-ins
