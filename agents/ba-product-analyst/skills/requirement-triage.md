@@ -13,6 +13,27 @@ description: >
 
 Decide what to do with a requirement before writing a single line of spec.
 
+## Step 0: Is the requirement clear enough to triage?
+
+Before any decision, check:
+- Can you state the business goal in one sentence?
+- Do you know who the user is and what they need to do?
+- Is there enough detail to compare against existing capabilities and ADRs?
+
+**If no:** Return to the stakeholder with specific clarifying questions. Do not attempt to triage an ambiguous requirement — you will make the wrong call.
+
+```markdown
+## Clarification needed: [Requirement title]
+
+To triage this requirement I need:
+- [Specific question 1]
+- [Specific question 2]
+```
+
+Only proceed once the requirement is clear enough to evaluate.
+
+---
+
 ## The three decisions
 
 | Decision | Condition | Action |
@@ -74,6 +95,41 @@ This is the most common case. The business goal is valid but the stakeholder's p
 
 ---
 
+---
+
+## Step 4: Check dependencies and timing
+
+- Is this requirement blocked by an in-flight change that hasn't landed yet?
+- Does it need to be sequenced after another ticket or release?
+- Are there parallel workstreams that could conflict?
+
+**If blocked:** Record the dependency in the triage output and do not start the spec until the blocker is resolved or a sequencing plan is agreed.
+
+---
+
+## Step 5: Check scope ownership
+
+- Which repo/service/team owns the affected area?
+- Does this requirement span multiple ownership boundaries?
+- Do other teams need to be consulted or involved before the spec is written?
+
+**If cross-team:** Identify all owners and schedule alignment before speccing. A spec written without input from an affected team will be rejected or reworked.
+
+---
+
+## Step 6: Flag risk and compliance
+
+Does this requirement touch any of the following?
+- PII or personal data
+- Payments or financial data
+- Authentication or authorisation
+- Regulated data (HIPAA, GDPR, SOC 2, etc.)
+- Audit trail requirements
+
+**If yes:** Flag it in the triage output so governance review is scheduled alongside development — not retrofitted after delivery.
+
+---
+
 ## Output: triage decision record
 
 Before writing the spec, record the triage outcome:
@@ -89,6 +145,15 @@ Before writing the spec, record the triage outcome:
 **Action:**
 [What happens next — redirect / escalate to Architect / alter as follows / proceed to spec]
 
+**Dependencies / sequencing:**
+[Any blockers or required sequencing — or "None"]
+
+**Scope owners:**
+[Which teams/repos are affected — or "Single team"]
+
+**Risk / compliance flags:**
+[PII / payments / auth / regulated data — or "None"]
+
 **Stakeholder communication needed:**
 [Yes/No — what to communicate and to whom]
 ```
@@ -98,3 +163,6 @@ Before writing the spec, record the triage outcome:
 - "The stakeholder wants it" is not a reason to override an ADR — escalate the tension
 - Alteration must preserve the business goal — if the altered version no longer meets the need, it's a rejection, not an alteration
 - Discovery of existing capability is the highest-value triage outcome — it saves the entire cost of a sprint
+- Triaging an ambiguous requirement produces a false sense of progress — clarify first, always
+- Cross-team requirements that skip the ownership check get reworked after delivery — the most expensive kind of rework
+- Governance retrofitted after delivery costs 10× more than governance built in from the start
