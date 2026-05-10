@@ -6,6 +6,7 @@ Resources for structuring and operating a software delivery team that uses agent
 
 ```
 ├── team-structure.md        # Research report: how traditional roles evolve with agentic AI tools
+├── multi-repo-documentation.md  # Research report: documenting multi-repo systems for agents
 ├── agents/                  # Assisting agents for each team role
 │   ├── ai-architect/        # Senior AI Architect / Tech Lead
 │   ├── senior-engineer/     # Senior Engineer
@@ -31,6 +32,20 @@ A research-backed report (25 sources, May 2026) covering:
 - Headcount implications and real company examples (Salesforce, Klarna, Coinbase)
 
 **Use this** when planning a team transition, hiring, or explaining role changes to stakeholders.
+
+---
+
+## multi-repo-documentation.md
+
+A research-backed report (20 sources, May 2026) covering:
+
+- The three-tier memory model (hot/warm/cold) for agent context
+- Documentation architecture across 4 levels: system map → repo AGENTS.md → module docs → cold memory retrieval
+- Cross-repo coordination patterns: shared contract repo, one agent per repo, hierarchical AGENTS.md
+- Staleness prevention: PR checklists, CODEOWNERS, CI drift detector, auto-generation
+- The 7 failure modes poor documentation causes and how to prevent each
+
+**Use this** when setting up documentation for a multi-repo system that AI agents will work on.
 
 ---
 
@@ -127,3 +142,5 @@ Each `AGENT.md` contains placeholder conventions. Before using:
 **Spec quality is the primary quality lever** — Vague specs produce bad agent output at machine speed. The BA and Senior Engineer agents both have spec-writing skills for this reason.
 
 **AI-generated code has higher defect rates** — 1.7× more major issues, 2.74× more security vulnerabilities than human-written code (CodeRabbit, 2025). The `quality-engineer` and `ai-architect` agents are configured with this in mind.
+
+**Build loops, not pipelines** — Agentic coding works because the development workflow has built-in verification at every step (compiler, tests, type checker). Errors surface immediately and are corrected before cascading. Every agent in this team is configured to run verification after each step, escalate on failure, and close feedback loops back to the spec — not accumulate errors silently to the end.
