@@ -60,7 +60,7 @@ agents/<role>/
 | `quality-engineer` | Risk zones, six-layer testing strategy | `adversarial-code-review`, `eval-suite-builder`, `test-strategy-charter`, `bug-report`, `regression-test-generator` |
 | `ba-product-analyst` | Spec depth guide, 7-section spec structure | `spec-drafter`, `spec-completeness-auditor`, `impact-assessor`, `requirement-triage`, `acceptance-criteria-generator`, `stakeholder-communicator` |
 | `devops-platform` | Model routing tiers, cost control levers | `agent-identity-governance`, `agent-cost-investigator`, `agentic-pipeline-architect` |
-| `ai-execution-agent` | Capabilities, guardrails, escalation triggers, PR template | `pr-writer`, `escalation-handler` |
+| `ai-execution-agent` | Capabilities, guardrails, escalation triggers, PR template | `task-kickoff`, `context-reader`, `pr-writer`, `escalation-handler` |
 
 ---
 
