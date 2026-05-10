@@ -13,6 +13,11 @@ Catch spec defects before the agent runs — they're the most expensive defects 
 
 ## Audit checklist
 
+### Pre-flight: triage
+- [ ] A triage decision record exists for this requirement
+- [ ] Decision is "Proceed as-is" or "Alter" (not pending or escalated)
+- [ ] Risk/compliance flags from triage are reflected in the spec (governance section present if flagged)
+
 ### Structure
 - [ ] Objective states what will exist after completion (not what will be done)
 - [ ] "Not Included" section exists with at least 2 out-of-scope items

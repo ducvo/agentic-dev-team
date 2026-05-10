@@ -17,6 +17,14 @@ A consultant writing bad code by hand produces one broken artifact per day. An a
 
 ## Workflow
 
+### Step 0: Confirm triage is complete
+Do not draft a spec without a completed triage decision record. Check:
+- Has `requirement-triage` been run on this requirement?
+- Is the decision "Proceed as-is" or "Alter"?
+- Are dependencies, ownership, and risk flags resolved?
+
+If triage hasn't been done, run it first.
+
 ### Step 1: Extract the essentials
 From the transcript/ticket/notes, identify:
 - What business problem is being solved?
@@ -69,6 +77,14 @@ Output: [schema or concrete example]
 - [ ] "Not Included" covers obvious adjacent features
 - [ ] "Ask First" tier is defined
 - [ ] Error cases are specified
+
+### Step 5: Validate with the stakeholder
+Before handing the spec to an agent or engineer, confirm with the stakeholder:
+- "Does this spec capture what you need?"
+- "Are there any edge cases or constraints I've missed?"
+- "Is the 'Not Included' list correct — are you comfortable with those boundaries?"
+
+Do not proceed to agent execution until the stakeholder has confirmed the spec reflects their intent. A spec the stakeholder hasn't seen is a spec that will be disputed after delivery.
 
 ## Gotchas
 - "Handle errors gracefully" is not an acceptance criterion — specify what error handling looks like
