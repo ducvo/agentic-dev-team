@@ -36,7 +36,24 @@ For each quality dimension, create inputs covering:
 
 Minimum: 20 inputs per dimension.
 
-## Step 3: LLM-as-judge prompt template
+## Step 3: Get threshold sign-off
+
+Before wiring thresholds into CI, get explicit sign-off from:
+- **Product** — do these thresholds reflect acceptable user experience?
+- **Legal / Compliance** — for safety, accuracy, or regulated content dimensions, are these thresholds sufficient?
+
+Document the sign-off:
+```markdown
+## Threshold sign-off: [Feature name]
+| Dimension | Threshold | Approved by | Date |
+|---|---|---|---|
+| Safety | = 1.0 | [name] | [date] |
+| Accuracy | > 0.95 | [name] | [date] |
+```
+
+Do not merge eval gates into CI until this sign-off is recorded.
+
+## Step 4: LLM-as-judge prompt template
 
 ```
 You are evaluating an AI system's output for [quality dimension].
@@ -52,7 +69,7 @@ Score from 0.0 to 1.0:
 Return only JSON: {"score": 0.0-1.0, "reason": "one sentence"}
 ```
 
-## Step 4: Wire into CI
+## Step 5: Wire into CI
 
 ```yaml
 eval-gate:

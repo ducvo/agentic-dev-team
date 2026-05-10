@@ -41,9 +41,11 @@ Assume at least one subtle logic error exists. AI code looks locally clean but h
 - [ ] Are error paths tested?
 - [ ] Would these tests catch a subtle logic error?
 
-### Business intent
-- [ ] Does the code actually solve the problem in the spec?
-- [ ] Are there cases where the code produces a plausible but wrong result?
+### Spec and acceptance criteria adherence
+- [ ] Obtain the spec's acceptance criteria before starting this review
+- [ ] For each AC: does the code produce the expected output for the given input?
+- [ ] Are there ACs the code silently ignores or partially implements?
+- [ ] Does the code implement anything NOT in the spec (scope creep)?
 
 ## Output format
 
@@ -62,8 +64,8 @@ Assume at least one subtle logic error exists. AI code looks locally clean but h
 ### Test quality issues
 - [Tautological test or missing assertion]
 
-### Business intent gaps
-- [Where code diverges from what the spec requires]
+### Spec / AC adherence gaps
+- [AC that is not satisfied or only partially implemented]
 
 ### Verdict: Pass | Needs changes | Block
 [Specific changes required]

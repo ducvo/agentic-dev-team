@@ -11,6 +11,15 @@ description: >
 
 Define what to test, how to test it, and what "good enough" looks like — before implementation starts.
 
+## Step 0: Read the spec and acceptance criteria
+
+Before defining any testing approach, read:
+- The spec's acceptance criteria — these define what "correct" looks like and drive test case design
+- The "Not Included" scope boundary — tests must not verify out-of-scope behaviour
+- The risk/compliance flags from triage — these determine mandatory testing layers
+
+If no spec or acceptance criteria exist, stop and request them from the BA. A test strategy written without ACs will miss the cases that matter most.
+
 ## Step 1: Classify the feature
 
 **Deterministic or non-deterministic?**
