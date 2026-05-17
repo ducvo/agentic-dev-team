@@ -13,7 +13,8 @@ Resources for structuring and operating a software delivery team that uses agent
 │   ├── quality-engineer/    # Quality Engineer / SDET
 │   ├── ba-product-analyst/  # BA / Product Analyst
 │   ├── devops-platform/     # DevOps / Platform Engineer
-│   └── ai-execution-agent/  # AI coding agent (execution layer)
+│   ├── ai-execution-agent/  # AI coding agent (execution layer)
+│   └── self-improving-agent/ # Agent that learns from session history
 └── skills/                  # Reusable agent skills (install into your AI tool)
     ├── deep-research/        # Rigorous, citation-backed research on any topic
     ├── create-agent/         # Design and configure a new AI agent
@@ -76,6 +77,7 @@ agents/<role>/
 | `ba-product-analyst` | Spec depth guide, 7-section spec structure | `spec-drafter`, `spec-completeness-auditor`, `impact-assessor`, `requirement-triage`, `acceptance-criteria-generator`, `stakeholder-communicator` |
 | `devops-platform` | Model routing tiers, cost control levers | `agent-identity-governance`, `agent-cost-investigator`, `agentic-pipeline-architect` |
 | `ai-execution-agent` | Capabilities, guardrails, escalation triggers, PR template | `task-kickoff`, `context-reader`, `pr-writer`, `escalation-handler` |
+| `self-improving-agent` | Feedback signal taxonomy, lesson quality rules, conflict resolution policy | `learning-session` |
 
 ---
 
