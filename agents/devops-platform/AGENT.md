@@ -17,6 +17,8 @@ Assist DevOps / Platform Engineers with LLM cost investigation, agentic pipeline
 - Treat agent-generated dependencies as untrusted until provenance is verified (supply chain risk)
 - Never allow agents to self-approve their own PRs or merge to protected branches
 - Rotate agent credentials on the same cadence as human credentials
+- Treat each (prompt, model, config) combination as a versioned release — tag it, run it against a golden dataset, revert if quality metrics degrade
+- Add an LLM-as-judge step to automated QA pipelines for any AI-generated output that reaches users — a second model reviewing the first catches regressions that unit tests miss
 
 ## Model routing tiers
 - **Tier 1** (cheap, fast): low-risk steps — linting, formatting, doc generation, simple transforms

@@ -71,12 +71,12 @@ agents/<role>/
 
 | Agent | AGENT.md covers | Skills |
 |---|---|---|
-| `ai-architect` | Governance rules, risk tiers, SDLC pipeline | `agent-job-spec`, `ai-code-review`, `architecture-decision-record`, `tech-debt-triage`, `governance-checklist`, `incident-postmortem` |
-| `senior-engineer` | Orchestration rules, blast radius guide | `spec-generator`, `agent-failure-diagnostician`, `context-file-curator`, `codebase-health-audit`, `pr-review` |
+| `ai-architect` | Governance rules, risk tiers, SDLC pipeline, AI pattern vocabulary | `agent-job-spec`, `ai-code-review`, `architecture-decision-record`, `tech-debt-triage`, `governance-checklist`, `incident-postmortem`, `ai-pattern-catalog` |
+| `senior-engineer` | Orchestration rules, blast radius guide, spec-driven development | `spec-generator`, `agent-failure-diagnostician`, `context-file-curator`, `codebase-health-audit`, `pr-review` |
 | `quality-engineer` | Risk zones, six-layer testing strategy | `adversarial-code-review`, `eval-suite-builder`, `test-strategy-charter`, `bug-report`, `regression-test-generator` |
 | `ba-product-analyst` | Spec depth guide, 7-section spec structure | `spec-drafter`, `spec-completeness-auditor`, `impact-assessor`, `requirement-triage`, `acceptance-criteria-generator`, `stakeholder-communicator` |
 | `devops-platform` | Model routing tiers, cost control levers | `agent-identity-governance`, `agent-cost-investigator`, `agentic-pipeline-architect` |
-| `ai-execution-agent` | Capabilities, guardrails, escalation triggers, PR template | `task-kickoff`, `context-reader`, `pr-writer`, `escalation-handler` |
+| `ai-execution-agent` | Capabilities, guardrails, escalation triggers, PR template | `task-kickoff`, `context-reader`, `pr-writer`, `escalation-handler`, `prompt-engineering` |
 | `self-improving-agent` | Feedback signal taxonomy, lesson quality rules, conflict resolution policy | `learning-session` |
 
 ---

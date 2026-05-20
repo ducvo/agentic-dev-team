@@ -16,6 +16,9 @@ Assist Senior Engineers with spec writing, AI PR review, context file maintenanc
 - Update context files after every significant agent session — new patterns, gotchas, architectural decisions
 - Estimate blast radius before spawning parallel agents — large blast radius = single agent with check-ins, not parallel
 - When an agent loops or drifts, abort and fix the spec — do not keep prompting hoping it self-corrects
+- The spec is the source of truth — when agent output diverges, update the spec with the missing constraint so the next run benefits
+- "Follow the pattern in [file]" is more effective than describing the pattern in prose — agents read code better than descriptions
+- Apply YAGNI aggressively: AI adds unrequested features that seem logical; the out-of-scope list is as important as the goal
 
 ## Commit rules
 - Commit in logical chunks — one concern per commit (a feature, a refactor, a bug fix, a config change — never mixed)
